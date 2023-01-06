@@ -1,6 +1,11 @@
 /* @media screen and (max-width: 992px) {
 
 } */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h3{
     font-size: 4rem;
 }
@@ -13,6 +18,15 @@ h5{
 a{
     text-decoration: none;
     /* color: #fff; */
+}
+li{
+    list-style: none;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #fff;
 }
 
 
@@ -39,10 +53,20 @@ nav ul{
     gap: 50px;
     list-style: none;
 }
+nav ul li{
+    color: #333;
+    cursor: pointer;
+
+}
+
+nav ul li:hover{
+    color: hsl(35, 77%, 62%);
+}
+
 .section{
     margin-top: 50px;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 .section .main{
@@ -57,19 +81,20 @@ nav ul{
 }
 .section .main .container{
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 50px 0;
 }
 
 .section .main .container .box:nth-child(1){
     width: 40%;
-    margin-top: -20px;
+    /* margin-top: -20px; */
     line-height: 60px;
 }
 .section .main .container .box:nth-child(2){
     width: 40%;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     line-height: 30px;
     color: #333;
 }
@@ -81,12 +106,187 @@ button{
     border: none;
     color: #fff;
     cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
 }
 
+button:hover{
+    background: hsl(240, 100%, 5%);
+}
 .section aside{
     width: 30%;
-    background: #333;
-    padding: 0 20px;
+    height: 550px;
+    background: hsl(240, 100%, 5%);
+    padding: 10px 20px;
 }
 
-.section aside
+.section aside h4{
+    color: hsl(35, 77%, 62%);
+}
+
+.section aside .container{
+    /* margin: -40px 0px; */
+}
+.section aside .container .box{
+    padding: 30px 0px;
+}
+
+.section aside .container .box h5{
+    color: #fff;
+    font-weight: 600;
+}
+.section aside .container .box h5:hover{
+   color: hsl(35, 77%, 62%);
+}
+
+.section aside .container .box p{
+    color: hsl(36, 100%, 99%);
+    /* margin-top: -30px; */
+    line-height: 30px;
+}
+
+.bottom{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.bottom .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bottom .container .box{
+    display: flex;
+    width: 90%;
+    flex-flow: row;
+    justify-content: center;
+    height: 150px;
+    gap: 10px;
+}
+/* .bottom .container .box img{
+    height: 150px;
+} */
+
+.bottom .container .box .text{
+   height: 150px;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-between;
+}
+
+.bottom .container .box .text h4{
+    color: rgba(7, 0, 0, 0.151);
+}
+
+.bottom .container .box .text h5:hover{
+    color: hsl(35, 77%, 62%);
+}
+
+.bottom .container .box .text h5{
+    color: #333;
+}
+.bottom .container .box .text p{
+    color: rgba(7, 0, 0, 0.411);
+}
+
+#navMenu{
+    display: none;
+}
+
+.mobile{
+    display: none;
+}
+.sidebar{
+    display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    body{
+        margin: 0 30px;
+    }
+    nav ul{
+        display: none;
+        
+    }
+    #navMenu{
+        display: block;
+        
+    }
+    .bar{
+        width: 20px;
+        height: 2px;
+        background: hsl(240, 100%, 5%);
+        margin: 5px;
+    }
+    .section .main{
+        width: 100%;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .section .main .container .box:nth-child(1){
+        width: 100%;
+    }
+
+    .section .main .container .box:nth-child(2){
+        width: 100%;
+    }
+
+    .section aside{
+        width: 100%;
+        height: auto;
+    }
+
+    .bottom .container{
+        flex-flow: row wrap;
+    }
+
+    .bottom .container .box{
+       width: 100%;
+       margin: 30px 0;
+       
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 70%;
+        height: 700px;
+        background: rgb(250, 250, 250);
+        float: right;
+    }
+    .closeline{
+        float: right;
+        padding: 20px;
+       font-size: 2rem;
+       line-height: 20px;
+    }
+    .menu{
+        position: relative;
+        top: 25%;
+        /* left: 50%; */
+    }
+    .menu ul li{
+        padding: 15px 20px;
+        cursor: pointer;
+        color: #333;
+    }
+    .menu ul li:hover{
+        color: hsl(35, 77%, 62%);
+    }
+ 
+    
+}
+
+
+
